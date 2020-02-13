@@ -57,7 +57,7 @@ public class TelaCadastroProduto extends javax.swing.JFrame {
 
         jLabel4.setText("jLabel4");
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setResizable(false);
 
         jPanel1.setBackground(new java.awt.Color(204, 204, 204));
