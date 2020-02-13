@@ -8,12 +8,10 @@ package br.com.ifba.vp.funcionario.view;
 import br.com.ifba.vp.infraestructure.view.TelaVerificarEstoque;
 import br.com.ifba.vp.produto.view.TelaCadastroProduto;
 import br.com.ifba.vp.cliente.view.TelaCadastroCliente;
-import br.com.ifba.vp.funcionario.model.Funcionario;
 import br.com.ifba.vp.infraestructure.service.Fachada;
 import br.com.ifba.vp.infraestructure.view.TelaLogin;
 import br.com.ifba.vp.produto.TableModel.ProdutoTableModel;
 import br.com.ifba.vp.produto.model.Produto;
-import static javassist.CtMethod.ConstParameter.integer;
 import javax.swing.JOptionPane;
 
 
@@ -69,7 +67,7 @@ public class TelaFuncionario extends javax.swing.JFrame {
         jBNovoCliente = new javax.swing.JButton();
         jBVerificarEstoque = new javax.swing.JButton();
         jBCadastrarProduto = new javax.swing.JButton();
-        jBSairTelaGerente = new javax.swing.JButton();
+        jBTrocarUsuario = new javax.swing.JButton();
         jPanel3 = new javax.swing.JPanel();
         jLabel6 = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
@@ -124,11 +122,11 @@ public class TelaFuncionario extends javax.swing.JFrame {
             }
         });
 
-        jBSairTelaGerente.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/logout.png"))); // NOI18N
-        jBSairTelaGerente.setText("Trocar de usuário");
-        jBSairTelaGerente.addActionListener(new java.awt.event.ActionListener() {
+        jBTrocarUsuario.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/logout.png"))); // NOI18N
+        jBTrocarUsuario.setText("Trocar de usuário");
+        jBTrocarUsuario.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jBSairTelaGerenteActionPerformed(evt);
+                jBTrocarUsuarioActionPerformed(evt);
             }
         });
 
@@ -148,7 +146,7 @@ public class TelaFuncionario extends javax.swing.JFrame {
                 .addGap(18, 18, 18)
                 .addComponent(jBCadastrarProduto)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jBSairTelaGerente)
+                .addComponent(jBTrocarUsuario)
                 .addContainerGap())
         );
         jPanel2Layout.setVerticalGroup(
@@ -161,7 +159,7 @@ public class TelaFuncionario extends javax.swing.JFrame {
                             .addComponent(jBNovoCliente, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jBVerificarEstoque)
                             .addComponent(jBCadastrarProduto)
-                            .addComponent(jBSairTelaGerente, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                            .addComponent(jBTrocarUsuario, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addGap(20, 20, 20)
                         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
@@ -366,18 +364,19 @@ public class TelaFuncionario extends javax.swing.JFrame {
     private void jBNovoClienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBNovoClienteActionPerformed
         // TODO add your handling code here:
         new TelaCadastroCliente().setVisible(true);
-        this.dispose();
+        //this.dispose();
     }//GEN-LAST:event_jBNovoClienteActionPerformed
 
     private void jBVerificarEstoqueActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBVerificarEstoqueActionPerformed
         // TODO add your handling code here:
         new TelaVerificarEstoque().setVisible(true);
+        //this.dispose();
     }//GEN-LAST:event_jBVerificarEstoqueActionPerformed
 
     private void jBCadastrarProdutoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBCadastrarProdutoActionPerformed
         // TODO add your handling code here:
         new TelaCadastroProduto().setVisible(true);
-        this.dispose();
+        //this.dispose();
     }//GEN-LAST:event_jBCadastrarProdutoActionPerformed
 
     private void jBOkActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBOkActionPerformed
@@ -409,11 +408,11 @@ public class TelaFuncionario extends javax.swing.JFrame {
           return null; 
     }
     
-    private void jBSairTelaGerenteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBSairTelaGerenteActionPerformed
+    private void jBTrocarUsuarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBTrocarUsuarioActionPerformed
         // TODO add your handling code here:
         new TelaLogin().setVisible(true);
         this.dispose();
-    }//GEN-LAST:event_jBSairTelaGerenteActionPerformed
+    }//GEN-LAST:event_jBTrocarUsuarioActionPerformed
 
     private void jBConfirmarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBConfirmarActionPerformed
         // TODO add your handling code here:
@@ -460,7 +459,7 @@ public class TelaFuncionario extends javax.swing.JFrame {
     private javax.swing.JButton jBConfirmar;
     private javax.swing.JButton jBNovoCliente;
     private javax.swing.JButton jBOk;
-    private javax.swing.JButton jBSairTelaGerente;
+    private javax.swing.JButton jBTrocarUsuario;
     private javax.swing.JButton jBVerificarEstoque;
     private javax.swing.JLabel jLPrecoTotal;
     private javax.swing.JLabel jLabel1;

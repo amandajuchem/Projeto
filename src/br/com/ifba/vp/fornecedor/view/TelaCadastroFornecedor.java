@@ -61,7 +61,7 @@ public class TelaCadastroFornecedor extends javax.swing.JFrame {
         jComboBox1 = new javax.swing.JComboBox<>();
         jBCancelar = new javax.swing.JButton();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setResizable(false);
 
         jPanel2.setBackground(new java.awt.Color(204, 204, 204));

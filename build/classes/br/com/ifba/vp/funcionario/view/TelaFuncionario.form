@@ -113,7 +113,7 @@
                       <EmptySpace type="separate" max="-2" attributes="0"/>
                       <Component id="jBCadastrarProduto" min="-2" max="-2" attributes="0"/>
                       <EmptySpace max="32767" attributes="0"/>
-                      <Component id="jBSairTelaGerente" min="-2" max="-2" attributes="0"/>
+                      <Component id="jBTrocarUsuario" min="-2" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
                   </Group>
               </Group>
@@ -128,7 +128,7 @@
                                   <Component id="jBNovoCliente" alignment="3" min="-2" pref="33" max="-2" attributes="0"/>
                                   <Component id="jBVerificarEstoque" alignment="3" min="-2" max="-2" attributes="0"/>
                                   <Component id="jBCadastrarProduto" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="jBSairTelaGerente" alignment="3" max="32767" attributes="0"/>
+                                  <Component id="jBTrocarUsuario" alignment="3" max="32767" attributes="0"/>
                               </Group>
                           </Group>
                           <Group type="102" alignment="0" attributes="0">
@@ -196,7 +196,7 @@
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jBCadastrarProdutoActionPerformed"/>
               </Events>
             </Component>
-            <Component class="javax.swing.JButton" name="jBSairTelaGerente">
+            <Component class="javax.swing.JButton" name="jBTrocarUsuario">
               <Properties>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
                   <Image iconType="3" name="/Images/logout.png"/>
@@ -204,7 +204,7 @@
                 <Property name="text" type="java.lang.String" value="Trocar de usu&#xe1;rio"/>
               </Properties>
               <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jBSairTelaGerenteActionPerformed"/>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jBTrocarUsuarioActionPerformed"/>
               </Events>
             </Component>
           </SubComponents>
