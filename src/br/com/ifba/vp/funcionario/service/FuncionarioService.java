@@ -100,7 +100,7 @@ public class FuncionarioService implements IFuncionarioService {
         
         else if (findByCPF(funcionario.getCpf()) != null) {
             return null;            
-            //throw new BusinessException (FUNCIONARIO_EXISTE);
+            //throw new BusinessException (FUNCIONARIO);
         }
         
         /* Verifica se os dados do funcionário são válidos */

@@ -42,7 +42,7 @@ public class FornecedorService implements IFornecedorService{
         
         /* Verifica se o CNPJ do fornecedor foi digitado */
         
-        if (fornecedor.getCnpj()!=0) {
+        if (fornecedor.getCnpj()==0) {
             return false;
         }
         /*Informações de fornecedor estão corretas */
@@ -62,7 +62,7 @@ public class FornecedorService implements IFornecedorService{
         
         else if (findByCNPJ(fornecedor.getCnpj()) != null) {
             return null;
-            //throw new BusinessException (FORNECEDOR_EXISTE);
+            //throw new BusinessException (FORNECEDOR);
         }
         
         /* Verifica se os dados do fornecedor são válidos */
