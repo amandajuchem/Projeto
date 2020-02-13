@@ -59,6 +59,7 @@ public class FuncionarioService implements IFuncionarioService {
         if (util.isNullOrEmpty(funcionario.getSenha())){
             return false;
         }
+        
         /* As informações de funcionario estão corretas */ 
         return true;
     }
@@ -70,11 +71,15 @@ public class FuncionarioService implements IFuncionarioService {
             return 0;
         }
         
+        else if(funcionario.getCpf().equals("") || funcionario.getSenha().equals("")){
+            return 0;
+        }
         /* Verifica se os dados informados são do funcionário gerente */
         
         else if(funcionario.getCpf().equals("12345678910") && ((funcionario.getSenha()).equals("1234"))){
             return 1;
         }
+        
         
         /* Verifica no banco de dados se os dados informados pertencem a um funcionário cadastrado */
         

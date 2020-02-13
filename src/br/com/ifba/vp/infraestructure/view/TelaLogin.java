@@ -190,6 +190,8 @@ public class TelaLogin extends javax.swing.JFrame{
         funcionario.setCpf(jTFCpf.getText());
         funcionario.setSenha(jPFSenha.getText());
         
+        
+        
         int resultado = fachada.loginFuncionario(funcionario);
         
         switch (resultado) {
