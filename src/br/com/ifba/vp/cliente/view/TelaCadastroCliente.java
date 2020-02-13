@@ -42,7 +42,7 @@ public class TelaCadastroCliente extends javax.swing.JFrame {
         jLabel13 = new javax.swing.JLabel();
         jTFCep = new javax.swing.JTextField();
         jBSalvar = new javax.swing.JButton();
-        jBCancelar = new javax.swing.JButton();
+        jBLimparCampos = new javax.swing.JButton();
         jLabel6 = new javax.swing.JLabel();
         jTFNumero = new javax.swing.JTextField();
         jLabel5 = new javax.swing.JLabel();
@@ -89,14 +89,14 @@ public class TelaCadastroCliente extends javax.swing.JFrame {
             }
         });
 
-        jBCancelar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/Cancelar.png"))); // NOI18N
-        jBCancelar.setText("Cancelar");
-        jBCancelar.setMaximumSize(new java.awt.Dimension(95, 29));
-        jBCancelar.setMinimumSize(new java.awt.Dimension(95, 29));
-        jBCancelar.setPreferredSize(new java.awt.Dimension(95, 29));
-        jBCancelar.addActionListener(new java.awt.event.ActionListener() {
+        jBLimparCampos.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/Cancelar.png"))); // NOI18N
+        jBLimparCampos.setText("Limpar campos");
+        jBLimparCampos.setMaximumSize(new java.awt.Dimension(95, 29));
+        jBLimparCampos.setMinimumSize(new java.awt.Dimension(95, 29));
+        jBLimparCampos.setPreferredSize(new java.awt.Dimension(95, 29));
+        jBLimparCampos.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jBCancelarActionPerformed(evt);
+                jBLimparCamposActionPerformed(evt);
             }
         });
 
@@ -205,14 +205,12 @@ public class TelaCadastroCliente extends javax.swing.JFrame {
                     .addGroup(jPCadastroClienteLayout.createSequentialGroup()
                         .addComponent(jLabel13)
                         .addGap(18, 18, 18)
-                        .addGroup(jPCadastroClienteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                        .addGroup(jPCadastroClienteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(jPCadastroClienteLayout.createSequentialGroup()
                                 .addComponent(jBSalvar, javax.swing.GroupLayout.PREFERRED_SIZE, 113, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(68, 68, 68)
-                                .addComponent(jBCancelar, javax.swing.GroupLayout.PREFERRED_SIZE, 123, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(jPCadastroClienteLayout.createSequentialGroup()
-                                .addComponent(jTFCep)
-                                .addGap(103, 103, 103)))))
+                                .addGap(42, 42, 42)
+                                .addComponent(jBLimparCampos, javax.swing.GroupLayout.PREFERRED_SIZE, 149, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(jTFCep, javax.swing.GroupLayout.PREFERRED_SIZE, 201, javax.swing.GroupLayout.PREFERRED_SIZE))))
                 .addContainerGap(36, Short.MAX_VALUE))
         );
         jPCadastroClienteLayout.setVerticalGroup(
@@ -261,7 +259,7 @@ public class TelaCadastroCliente extends javax.swing.JFrame {
                 .addGap(36, 36, 36)
                 .addGroup(jPCadastroClienteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jBSalvar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jBCancelar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jBLimparCampos, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(48, Short.MAX_VALUE))
         );
 
@@ -316,14 +314,14 @@ public class TelaCadastroCliente extends javax.swing.JFrame {
         limparCampos(jPCadastroCliente);
     }//GEN-LAST:event_jBSalvarActionPerformed
 
-    private void jBCancelarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBCancelarActionPerformed
+    private void jBLimparCamposActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBLimparCamposActionPerformed
         // TODO add your handling code here:
         /*
         new TelaFuncionario().setVisible(true);
         this.dispose();
         */
         limparCampos(jPCadastroCliente);
-    }//GEN-LAST:event_jBCancelarActionPerformed
+    }//GEN-LAST:event_jBLimparCamposActionPerformed
     private void limparCampos(JPanel conteiner)
     {
         Component components[] = conteiner.getComponents();
@@ -372,7 +370,7 @@ public class TelaCadastroCliente extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jBCancelar;
+    private javax.swing.JButton jBLimparCampos;
     private javax.swing.JButton jBSalvar;
     private javax.swing.JComboBox<String> jCBEstado;
     private javax.swing.JComboBox<String> jCBSexo;
