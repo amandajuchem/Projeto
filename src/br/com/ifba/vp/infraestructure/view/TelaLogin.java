@@ -188,7 +188,7 @@ public class TelaLogin extends javax.swing.JFrame{
     //Metódo que verifica se o login foi possível e abre a tela correspondente
     private void login () {
         funcionario.setCpf(jTFCpf.getText());
-        funcionario.setSenha(Integer.parseInt(jPFSenha.getText()));
+        funcionario.setSenha(jPFSenha.getText());
         
         int resultado = fachada.loginFuncionario(funcionario);
         

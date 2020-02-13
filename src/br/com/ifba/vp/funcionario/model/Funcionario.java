@@ -19,7 +19,7 @@ import javax.persistence.Table;
 public class Funcionario extends Pessoa implements Serializable{
     
     protected String email;
-    protected int senha;
+    protected String senha;
     protected String tipo;
 
     public String getEmail() {
@@ -30,11 +30,11 @@ public class Funcionario extends Pessoa implements Serializable{
         this.email = email;
     }
 
-    public int getSenha() {
+    public String getSenha() {
         return senha;
     }
 
-    public void setSenha(int senha) {
+    public void setSenha(String senha) {
         this.senha = senha;
     }
 

@@ -69,7 +69,7 @@ public class TelaCadastroFuncionario extends javax.swing.JFrame {
         jComboBox2 = new javax.swing.JComboBox<>();
         jCBEspecializacao = new javax.swing.JComboBox();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setResizable(false);
 
         jPanel1.setBackground(new java.awt.Color(204, 204, 204));
@@ -312,10 +312,10 @@ public class TelaCadastroFuncionario extends javax.swing.JFrame {
         Funcionario funcionario = new Funcionario();
         
         
-        try{
+        //try{
             
             funcionario.setNome(txtnomeFunc.getText());
-            funcionario.setSenha(Integer.parseInt(txtsenhaFunc.getText()));
+            funcionario.setSenha(txtsenhaFunc.getText());
             funcionario.setEmail(txtemailFunc.getText());
             funcionario.setSexo((String)jComboBox2.getSelectedItem());
             funcionario.setRg(Integer.parseInt (txtRgFunc.getText()));
@@ -336,11 +336,10 @@ public class TelaCadastroFuncionario extends javax.swing.JFrame {
             } else {
                 JOptionPane.showMessageDialog(this, "Erro! Não foi possível cadastrar funcionário!", "Erro", JOptionPane.ERROR_MESSAGE);
             }
-       }catch(java.lang.NumberFormatException ex){
-            
-            JOptionPane.showMessageDialog(null, "Um ou mais campos númericos foram preenchidos com pontos, espaços ou caracteres!");
-        
-       }
+       // }catch(Exception e){
+         //    JOptionPane.showMessageDialog(this, "Erro! Não foi possível cadastrar funcionário!", "Erro", JOptionPane.ERROR_MESSAGE);
+        //}
+       
         
     }//GEN-LAST:event_jBSalvarActionPerformed
 

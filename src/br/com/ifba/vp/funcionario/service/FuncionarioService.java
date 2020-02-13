@@ -56,7 +56,7 @@ public class FuncionarioService implements IFuncionarioService {
         
         /* Verifica se a senha do funcionário é nula ou vazia */
         
-        if (funcionario.getSenha()!=0){
+        if (util.isNullOrEmpty(funcionario.getSenha())){
             return false;
         }
         /* As informações de funcionario estão corretas */ 
@@ -71,7 +71,7 @@ public class FuncionarioService implements IFuncionarioService {
         
         /* Verifica se os dados informados são do funcionário gerente */
         
-        else if(funcionario.getCpf().equals("12345678910") && (Integer.toString(funcionario.getSenha()).equals("1234"))){
+        else if(funcionario.getCpf().equals("12345678910") && ((funcionario.getSenha()).equals("1234"))){
             return 1;
         }
         
