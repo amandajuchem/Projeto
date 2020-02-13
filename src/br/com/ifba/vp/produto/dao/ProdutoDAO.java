@@ -26,7 +26,7 @@ public class ProdutoDAO extends GenericDAO<Produto> implements IProdutoDAO{
 
     @Override
     public List<Produto> findByName(String name) {
-        String sql = "FROM Produto WHERE nome LIKE '%" + name + "%'";
+        String sql = "FROM Produto WHERE nomeProduto LIKE '%" + name + "%'";
         
         try {
             return entityManager.createQuery(sql).getResultList();

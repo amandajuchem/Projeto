@@ -16,8 +16,8 @@ import javax.swing.table.DefaultTableModel;
  * @author Icaro
  */
 public class TelaVerificarEstoque extends javax.swing.JFrame {
-    private final Fachada fachada;
-    private final ProdutoTableModel produtoTB;
+    private Fachada fachada;
+    private ProdutoTableModel produtoTB;
     /**
      * Creates new form TelaVerificarEstoque
      */
@@ -30,8 +30,8 @@ public class TelaVerificarEstoque extends javax.swing.JFrame {
         
         jTableProduto.setModel(produtoTB);
         jTableProduto.getColumnModel().getColumn(0).setPreferredWidth(263);
-        jTableProduto.getColumnModel().getColumn(1).setPreferredWidth(50);
-        jTableProduto.getColumnModel().getColumn(2).setPreferredWidth(50);
+        jTableProduto.getColumnModel().getColumn(1).setPreferredWidth(75);
+        jTableProduto.getColumnModel().getColumn(2).setPreferredWidth(150);
         jTableProduto.getColumnModel().getColumn(3).setPreferredWidth(100);
         
         
@@ -183,19 +183,19 @@ public class TelaVerificarEstoque extends javax.swing.JFrame {
     
     //Metodo que busca produtos e adiciona no Table
     private void busca () {
-        String nome = jTFNome.getText();
+        String nome = jTFNome.getText().toLowerCase();
+        
         List<Produto> produtos = fachada.findByName(nome);
         
-        if (produtos != null) {
-            
-            for (int i = 0; i < produtoTB.getRowCount(); i++) {
+        
+        for (int i = 0; i < produtoTB.getRowCount(); i++) {
                 produtoTB.removeElement(i);
-            }
-            
-            for (Produto p : produtos) {
-                produtoTB.addElement(p);
-            }
         }
+            
+        for (Produto p : produtos) {
+                produtoTB.addElement(p);
+        }
+        
     }
     /**
      * @param args the command line arguments
