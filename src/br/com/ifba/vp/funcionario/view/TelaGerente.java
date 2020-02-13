@@ -11,13 +11,13 @@ import br.com.ifba.vp.fornecedor.view.TelaCadastroFornecedor;
  * @author lab02
  */
 
-public class JFrameGerente extends javax.swing.JFrame {
+public class TelaGerente extends javax.swing.JFrame {
     private final TelaCadastroFuncionario telaCadastrarFuncionario;
     private final TelaCadastroFornecedor telaCadastrarFornecedor;
     private final PesquisarFuncionario telaPesquisarFuncionario;
     private final TelaVerificarEstoque telaVerificarEstoque;
     
-    public JFrameGerente() {
+    public TelaGerente() {
         initComponents();
         
         telaCadastrarFuncionario = new TelaCadastroFuncionario();

@@ -77,9 +77,10 @@ public class FuncionarioService implements IFuncionarioService {
         
         /* Verifica no banco de dados se os dados informados pertencem a um funcionário cadastrado */
         
-        else {
+        else if(validarFuncionario(funcionario)){
             return 2;
         }
+        return 0;
     }
 
     @Override

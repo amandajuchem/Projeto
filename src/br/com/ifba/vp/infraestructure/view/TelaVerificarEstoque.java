@@ -57,7 +57,7 @@ public class TelaVerificarEstoque extends javax.swing.JFrame {
         jTableProduto = new javax.swing.JTable();
         jTFNome = new javax.swing.JTextField();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setResizable(false);
 
         jPanel1.setBackground(new java.awt.Color(204, 204, 204));

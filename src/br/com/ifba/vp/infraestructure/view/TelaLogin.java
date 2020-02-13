@@ -6,7 +6,7 @@
 package br.com.ifba.vp.infraestructure.view;
 
 
-import br.com.ifba.vp.funcionario.view.JFrameGerente;
+import br.com.ifba.vp.funcionario.view.TelaGerente;
 import br.com.ifba.vp.funcionario.view.TelaFuncionario;
 import br.com.ifba.vp.funcionario.model.Funcionario;
 import br.com.ifba.vp.infraestructure.service.Fachada;
@@ -20,8 +20,8 @@ import javax.swing.JOptionPane;
 public class TelaLogin extends javax.swing.JFrame{
     private final IFachada fachada;
     private final Funcionario funcionario;
-    private final JFrameGerente telaGerente;
-    private final TelaFuncionario telaFuncionario;
+    /*private final JFrameGerente telaGerente;
+    private final TelaFuncionario telaFuncionario;*/
     /**
      * Creates new form TelaLogin
      */
@@ -30,8 +30,8 @@ public class TelaLogin extends javax.swing.JFrame{
         
         fachada = Fachada.getInstance();
         funcionario = new Funcionario();
-        telaGerente = new JFrameGerente();
-        telaFuncionario = new TelaFuncionario();
+        /*telaGerente = new TelaGerente();
+        telaFuncionario = new TelaFuncionario();*/
     }
 
     /**
@@ -197,13 +197,11 @@ public class TelaLogin extends javax.swing.JFrame{
                 JOptionPane.showMessageDialog(this, "Erro! Usuário e/ou senha inválidos!", "Erro", resultado);
                 break;
             case 1:
-                telaGerente.setLocationRelativeTo(null);
-                telaGerente.setVisible(true);
+                new TelaGerente().setVisible(true);
                 dispose();
                 break;
             case 2:
-                telaFuncionario.setLocationRelativeTo(null);
-                telaFuncionario.setVisible(true);
+                new TelaFuncionario().setVisible(true);
                 dispose();
                 break;
         }
