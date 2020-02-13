@@ -27,7 +27,7 @@ public interface IFachada {
     //Metodo que encontra um cliente pelo id 
     public abstract Cliente findByIdCliente (long id);
     //Metodo que encontra um cliente pelo cpf 
-    public abstract Cliente findByCPFCliente (long cpf);
+    public abstract Cliente findByCPFCliente (String cpf);
     //Metodo que encontra uma lista de clientes 
     public abstract List<Cliente> findAllCliente ();
     
@@ -57,7 +57,7 @@ public interface IFachada {
     //Metodo que busca funcionario por id
     public abstract Funcionario findByIdFuncionario (long id);
     //Metodo que busca funcionario por cpf
-    public abstract Funcionario findByCPFFuncionario (long cpf);
+    public abstract Funcionario findByCPFFuncionario (String cpf);
     //Metodo que busca uma lista de funcionarios
     public abstract List<Funcionario> findAllFuncionario ();
     

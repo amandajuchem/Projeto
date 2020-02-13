@@ -63,7 +63,7 @@ public class Fachada implements IFachada{
     }
 
     @Override
-    public Cliente findByCPFCliente(long cpf) {
+    public Cliente findByCPFCliente(String cpf) {
         return clienteService.findByCPF(cpf);
     }
 
@@ -136,7 +136,7 @@ public class Fachada implements IFachada{
     }
 
     @Override
-    public Funcionario findByCPFFuncionario(long cpf) {
+    public Funcionario findByCPFFuncionario(String cpf) {
         return funcionarioService.findByCPF(cpf);
     }
 

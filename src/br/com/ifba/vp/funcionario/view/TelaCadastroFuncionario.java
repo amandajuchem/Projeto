@@ -319,9 +319,9 @@ public class TelaCadastroFuncionario extends javax.swing.JFrame {
             funcionario.setEmail(txtemailFunc.getText());
             funcionario.setSexo((String)jComboBox2.getSelectedItem());
             funcionario.setRg(Integer.parseInt (txtRgFunc.getText()));
-            funcionario.setCpf(Long.parseLong (txtCPF.getText()));
+            funcionario.setCpf(txtCPF.getText());
             funcionario.setTipo(jCBEspecializacao.getSelectedItem().toString());
-            funcionario.setTelefone(Long.parseLong (txtTelFunc.getText()));
+            funcionario.setTelefone(txtTelFunc.getText());
             funcionario.setRua(txtRuaFunc.getText());
             funcionario.setNumero(Integer.parseInt (txtNumFunc.getText()));
             funcionario.setCidade(txtCidade.getText());

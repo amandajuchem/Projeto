@@ -22,7 +22,7 @@ public interface IClienteService {
     //Metodo que procura um cliente no banco pelo id
     public abstract Cliente findById (long id);
     //Metodo que procura um cliente no banco pelo cpf
-    public abstract Cliente findByCPF (long cpf);
+    public abstract Cliente findByCPF (String cpf);
     //Metodo que retorna uma lista de clientes do banco
     public abstract List<Cliente> findAll ();
 }

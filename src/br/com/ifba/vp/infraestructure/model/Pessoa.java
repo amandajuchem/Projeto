@@ -5,7 +5,6 @@
  */
 package br.com.ifba.vp.infraestructure.model;
 
-import br.com.ifba.vp.infraestructure.model.AbstractEntity;
 import javax.persistence.MappedSuperclass;
 
 /**
@@ -16,7 +15,7 @@ import javax.persistence.MappedSuperclass;
 public abstract class Pessoa extends AbstractEntity {
     
     protected String nome;
-    protected long telefone;
+    protected String telefone;
     protected int rg;
     protected String estado;
     protected String cidade;;
@@ -24,7 +23,7 @@ public abstract class Pessoa extends AbstractEntity {
     protected String bairro;
     protected int numero;
     protected String sexo;
-    protected long cpf;
+    protected String cpf;
     protected int cep;
 
     public String getNome() {
@@ -35,11 +34,11 @@ public abstract class Pessoa extends AbstractEntity {
         this.nome = nome;
     }
 
-    public long getTelefone() {
+    public String getTelefone() {
         return telefone;
     }
 
-    public void setTelefone(long telefone) {
+    public void setTelefone(String telefone) {
         this.telefone = telefone;
     }
 
@@ -99,11 +98,11 @@ public abstract class Pessoa extends AbstractEntity {
         this.sexo = sexo;
     }
 
-    public long getCpf() {
+    public String getCpf() {
         return cpf;
     }
 
-    public void setCpf(long cpf) {
+    public void setCpf(String cpf) {
         this.cpf = cpf;
     }
 

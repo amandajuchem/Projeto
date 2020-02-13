@@ -50,7 +50,7 @@ public class FuncionarioService implements IFuncionarioService {
         
         /* Verifica se o CPF do funcionário foi digitado */
         
-        if (funcionario.getCpf()!=0) {
+        if (util.isNullOrEmpty(funcionario.getCpf())) {
             return false;
         }
         
@@ -71,7 +71,7 @@ public class FuncionarioService implements IFuncionarioService {
         
         /* Verifica se os dados informados são do funcionário gerente */
         
-        else if((Long.toString(funcionario.getCpf())).equals("12345678910") && (Integer.toString(funcionario.getSenha()).equals("1234"))){
+        else if(funcionario.getCpf().equals("12345678910") && (Integer.toString(funcionario.getSenha()).equals("1234"))){
             return 1;
         }
         
@@ -163,7 +163,7 @@ public class FuncionarioService implements IFuncionarioService {
     }
 
     @Override
-    public Funcionario findByCPF(long cpf) {
+    public Funcionario findByCPF(String cpf) {
         return funcionarioDAO.findByCPF(cpf);
     }
 

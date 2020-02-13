@@ -24,7 +24,7 @@ public interface IFuncionarioService {
     //Metodo que busca funcionario por id
     public abstract Funcionario findById (long id);
     //Metodo que busca funcionario pelo cpf
-    public abstract Funcionario findByCPF (long cpf);
+    public abstract Funcionario findByCPF (String cpf);
     //Metodo que busca uma lista de funcionarios 
     public abstract List<Funcionario> findAll ();
 }

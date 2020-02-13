@@ -314,9 +314,9 @@ public class TelaCadastroCliente extends javax.swing.JFrame {
             
             cliente.setNome(jTFNome.getText());
             cliente.setSexo((String)jCBSexo.getSelectedItem());
-            cliente.setTelefone(Long.parseLong(jTFTelefone.getText()));
+            cliente.setTelefone(jTFTelefone.getText());
             cliente.setRg(Integer.parseInt(jTFRG.getText()));
-            cliente.setCpf(Long.parseLong(jTFCpf.getText()));      
+            cliente.setCpf(jTFCpf.getText());      
             cliente.setRua(jTFRua.getText());
             cliente.setNumero(Integer.parseInt(jTFNumero.getText()));   
             cliente.setCidade(jTFCidade.getText());

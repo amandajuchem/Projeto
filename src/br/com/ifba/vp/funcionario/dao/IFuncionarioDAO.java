@@ -16,5 +16,5 @@ public interface IFuncionarioDAO extends IGenericDAO<Funcionario>{
     //Metodo que faz login
     public abstract int login (Funcionario funcionario);
     //Metodo que busca um funcionario por CPF
-    public abstract Funcionario findByCPF (long cpf);
+    public abstract Funcionario findByCPF (String cpf);
 }

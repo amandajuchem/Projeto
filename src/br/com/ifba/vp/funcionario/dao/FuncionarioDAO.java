@@ -17,7 +17,7 @@ public class FuncionarioDAO extends GenericDAO<Funcionario> implements IFunciona
 
     @Override
     public int login(Funcionario funcionario) {
-        String sql = "FROM Funcionario WHERE cpf = '" + Long.toString(funcionario.getCpf()) + "' AND senha = '" + funcionario.getSenha() + "'";
+        String sql = "FROM Funcionario WHERE cpf = '" + funcionario.getCpf() + "' AND senha = '" + funcionario.getSenha() + "'";
         
         try {
             return  entityManager.createQuery(sql).getSingleResult() != null ? 2 : 0;
@@ -27,8 +27,8 @@ public class FuncionarioDAO extends GenericDAO<Funcionario> implements IFunciona
     }
 
     @Override
-    public Funcionario findByCPF(long cpf) {
-        String sql = "FROM Funcionario WHERE cpf = '" + Long.toString(cpf) + "'";
+    public Funcionario findByCPF(String cpf) {
+        String sql = "FROM Funcionario WHERE cpf = '" + cpf + "'";
         
         try {
             return (Funcionario) entityManager.createQuery(sql).getSingleResult();

@@ -11,8 +11,6 @@ import br.com.ifba.vp.funcionario.view.TelaFuncionario;
 import br.com.ifba.vp.funcionario.model.Funcionario;
 import br.com.ifba.vp.infraestructure.service.Fachada;
 import br.com.ifba.vp.infraestructure.service.IFachada;
-import java.util.ArrayList;
-import java.util.List;
 import javax.swing.JOptionPane;
 
 /**
@@ -189,7 +187,7 @@ public class TelaLogin extends javax.swing.JFrame{
     }//GEN-LAST:event_jPFSenhaActionPerformed
     //Metódo que verifica se o login foi possível e abre a tela correspondente
     private void login () {
-        funcionario.setCpf(Long.parseLong(jTFCpf.getText()));
+        funcionario.setCpf(jTFCpf.getText());
         funcionario.setSenha(Integer.parseInt(jPFSenha.getText()));
         
         int resultado = fachada.loginFuncionario(funcionario);

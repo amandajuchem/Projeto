@@ -48,7 +48,7 @@ public class ClienteService implements IClienteService{
         
         /* Verifica se o CPF do cliente foi digitado */
         
-        if (cliente.getCpf()!=0) {
+        if (util.isNullOrEmpty(cliente.getCpf())) {
             return false;
         }
          /*Informações de cliente estão corretas */
@@ -67,7 +67,7 @@ public class ClienteService implements IClienteService{
         
         /* Verifica se já existe um cliente no banco de dados com o mesmo CPF */
         
-        else if (cliente.getCpf()!=0) {
+        else if (findByCPF(cliente.getCpf()) != null) {
             return null;
             //throw new BusinessException (CLIENTE);
         }
@@ -143,7 +143,7 @@ public class ClienteService implements IClienteService{
     }
 
     @Override
-    public Cliente findByCPF(long cpf) {
+    public Cliente findByCPF(String cpf) {
         return clienteDAO.findByCPF(cpf);
     }
 

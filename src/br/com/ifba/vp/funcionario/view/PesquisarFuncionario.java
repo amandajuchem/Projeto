@@ -226,7 +226,7 @@ public class PesquisarFuncionario extends javax.swing.JFrame {
         
         for (Funcionario funcionario : funcionarios) {
             
-            if (Long.toString(funcionario.getCpf()).equalsIgnoreCase(cpf)) {
+            if (funcionario.getCpf().equalsIgnoreCase(cpf)) {
                 funcionarioTB.addElement(funcionario);
             }
         }

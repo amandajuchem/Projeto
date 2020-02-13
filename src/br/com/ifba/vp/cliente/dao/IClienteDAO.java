@@ -17,6 +17,6 @@ import br.com.ifba.vp.infraestructure.dao.IGenericDAO;
 public interface IClienteDAO extends IGenericDAO<Cliente>{
     
     //Metodo que encontra um cliente pelo cpf 
-    public abstract Cliente findByCPF (long cpf);
+    public abstract Cliente findByCPF (String cpf);
     
 }

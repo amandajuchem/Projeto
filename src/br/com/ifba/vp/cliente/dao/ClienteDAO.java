@@ -17,8 +17,8 @@ import javax.persistence.NoResultException;
 public class ClienteDAO extends GenericDAO<Cliente> implements IClienteDAO{
 
     @Override
-    public Cliente findByCPF(long cpf) {
-        String sql = "FROM Cliente WHERE cpf = '" + Long.toString(cpf) + "'";
+    public Cliente findByCPF(String cpf) {
+        String sql = "FROM Cliente WHERE cpf = '" + cpf + "'";
         
         try {
             return (Cliente) entityManager.createQuery(sql).getSingleResult();
