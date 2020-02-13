@@ -42,7 +42,8 @@ public class ProdutoService implements IProdutoService {
         
         /* Verifica se o código de barras do produto é nulo ou vazio */
         
-        if (produto.getCodigoBarras()!=0) {
+        if (Integer.toString(produto.getCodigoBarras()).equals("")
+                || Integer.toString(produto.getCodigoBarras()).equals("0")) {
             return false;
         }
         
@@ -54,7 +55,7 @@ public class ProdutoService implements IProdutoService {
         
         /* Verifica se o estoque do produto é inferior a um */
         
-        if (produto.getQuantidade() < 1) {
+        if (produto.getQuantidade() <= 1) {
             return false;
         }
         //As informações estão corretas
@@ -72,7 +73,7 @@ public class ProdutoService implements IProdutoService {
         
         else if (findByCodigoBarras(produto.getCodigoBarras()) != null) {
             return null;
-            //throw new BusinessException (PRODUTO_EXISTE);
+            //throw new BusinessException (PRODUTO);
         }
         
         /* Verifica se os dados do produto são válidos */

@@ -36,6 +36,9 @@ public class TelaCadastroProduto extends javax.swing.JFrame {
 
         jLabel4 = new javax.swing.JLabel();
         jPCadastroProduto = new javax.swing.JPanel();
+        jTFQuantidade = new javax.swing.JTextField();
+        jLQuantidade = new javax.swing.JLabel();
+        jFTFValidade = new javax.swing.JFormattedTextField();
         jLabel1 = new javax.swing.JLabel();
         jTFNome = new javax.swing.JTextField();
         jLabel2 = new javax.swing.JLabel();
@@ -54,9 +57,6 @@ public class TelaCadastroProduto extends javax.swing.JFrame {
         jPanel2 = new javax.swing.JPanel();
         jLabel10 = new javax.swing.JLabel();
         jLabel11 = new javax.swing.JLabel();
-        jTFQuantidade = new javax.swing.JTextField();
-        jLQuantidade = new javax.swing.JLabel();
-        jFTFValidade = new javax.swing.JFormattedTextField();
 
         jLabel4.setText("jLabel4");
 
@@ -65,6 +65,10 @@ public class TelaCadastroProduto extends javax.swing.JFrame {
 
         jPCadastroProduto.setBackground(new java.awt.Color(204, 204, 204));
         jPCadastroProduto.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
+
+        jLQuantidade.setText("Quantidade");
+
+        jFTFValidade.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.DateFormatter(new java.text.SimpleDateFormat(""))));
 
         jLabel1.setText("Nome do produto");
 
@@ -128,10 +132,6 @@ public class TelaCadastroProduto extends javax.swing.JFrame {
                         .addComponent(jLabel10)
                         .addGap(29, 29, 29))))
         );
-
-        jLQuantidade.setText("Quantidade");
-
-        jFTFValidade.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.DateFormatter(new java.text.SimpleDateFormat("##/##/####"))));
 
         javax.swing.GroupLayout jPCadastroProdutoLayout = new javax.swing.GroupLayout(jPCadastroProduto);
         jPCadastroProduto.setLayout(jPCadastroProdutoLayout);
@@ -264,6 +264,7 @@ public class TelaCadastroProduto extends javax.swing.JFrame {
         
             if (produto != null) {
                 JOptionPane.showMessageDialog(this, "Produto cadastrado!", "Confirmação", JOptionPane.INFORMATION_MESSAGE);
+                limparCampos(jPCadastroProduto);
             } else {
                 JOptionPane.showMessageDialog(this, "Erro! Não foi possível cadastrar produto!", "Erro", JOptionPane.ERROR_MESSAGE);
             }
