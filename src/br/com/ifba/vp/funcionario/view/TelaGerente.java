@@ -5,6 +5,7 @@ import br.com.ifba.vp.funcionario.view.PesquisarFuncionario;
 import br.com.ifba.vp.funcionario.view.TelaCadastroFuncionario;
 import br.com.ifba.vp.infraestructure.view.TelaVerificarEstoque;
 import br.com.ifba.vp.fornecedor.view.TelaCadastroFornecedor;
+import br.com.ifba.vp.infraestructure.view.TelaLogin;
 
 /**
  *
@@ -38,7 +39,7 @@ public class TelaGerente extends javax.swing.JFrame {
         jPanel3 = new javax.swing.JPanel();
         jLabel9 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
-        jBTSair = new javax.swing.JButton();
+        jBTrocarUsuario = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Tela do Gerente");
@@ -105,12 +106,12 @@ public class TelaGerente extends javax.swing.JFrame {
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/Gerente.png"))); // NOI18N
 
-        jBTSair.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        jBTSair.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/logout.png"))); // NOI18N
-        jBTSair.setText("Sair");
-        jBTSair.addActionListener(new java.awt.event.ActionListener() {
+        jBTrocarUsuario.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        jBTrocarUsuario.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/logout.png"))); // NOI18N
+        jBTrocarUsuario.setText("Trocar Usuário");
+        jBTrocarUsuario.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jBTSairActionPerformed(evt);
+                jBTrocarUsuarioActionPerformed(evt);
             }
         });
 
@@ -123,8 +124,8 @@ public class TelaGerente extends javax.swing.JFrame {
                 .addComponent(jLabel1)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jLabel9)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 281, Short.MAX_VALUE)
-                .addComponent(jBTSair)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 203, Short.MAX_VALUE)
+                .addComponent(jBTrocarUsuario, javax.swing.GroupLayout.PREFERRED_SIZE, 149, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
         );
         jPanel3Layout.setVerticalGroup(
@@ -132,7 +133,7 @@ public class TelaGerente extends javax.swing.JFrame {
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jBTSair, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jBTrocarUsuario, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel1)
                     .addComponent(jLabel9))
                 .addGap(28, 28, 28))
@@ -156,9 +157,10 @@ public class TelaGerente extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
     
     /* Evento para encerrar o sistema */
-    private void jBTSairActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBTSairActionPerformed
-        System.exit(0);
-    }//GEN-LAST:event_jBTSairActionPerformed
+    private void jBTrocarUsuarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBTrocarUsuarioActionPerformed
+        new TelaLogin().setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_jBTrocarUsuarioActionPerformed
 
     /* Evento que chama a tela cadastro de funcionário */
     private void jBTCadastrarFuncionarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBTCadastrarFuncionarioActionPerformed
@@ -188,8 +190,8 @@ public class TelaGerente extends javax.swing.JFrame {
     private javax.swing.JButton jBTCadastrarFornecedor;
     private javax.swing.JButton jBTCadastrarFuncionario;
     private javax.swing.JButton jBTPesquisarFuncionario;
-    private javax.swing.JButton jBTSair;
     private javax.swing.JButton jBTVerificarEstoque;
+    private javax.swing.JButton jBTrocarUsuario;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
