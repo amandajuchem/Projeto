@@ -65,6 +65,7 @@ public class FuncionarioService implements IFuncionarioService {
     
     @Override
     public int login(Funcionario funcionario) {
+        
         if (funcionario == null) {
             return 0;
         }
@@ -77,7 +78,7 @@ public class FuncionarioService implements IFuncionarioService {
         
         /* Verifica no banco de dados se os dados informados pertencem a um funcionário cadastrado */
         
-        else if(validarFuncionario(funcionario)){
+        else if(findByCPF(funcionario.getCpf())!=null){
             return 2;
         }
         return 0;
