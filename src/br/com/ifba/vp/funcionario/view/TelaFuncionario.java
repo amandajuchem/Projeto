@@ -125,7 +125,7 @@ public class TelaFuncionario extends javax.swing.JFrame {
         });
 
         jBSairTelaGerente.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/logout.png"))); // NOI18N
-        jBSairTelaGerente.setText("Sair");
+        jBSairTelaGerente.setText("Trocar de usuário");
         jBSairTelaGerente.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jBSairTelaGerenteActionPerformed(evt);
@@ -372,7 +372,6 @@ public class TelaFuncionario extends javax.swing.JFrame {
     private void jBVerificarEstoqueActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBVerificarEstoqueActionPerformed
         // TODO add your handling code here:
         new TelaVerificarEstoque().setVisible(true);
-        this.dispose();
     }//GEN-LAST:event_jBVerificarEstoqueActionPerformed
 
     private void jBCadastrarProdutoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBCadastrarProdutoActionPerformed
